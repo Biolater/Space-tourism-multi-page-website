@@ -1,10 +1,14 @@
-import './App.css'
+import "./App.css";
+import Hero from "./components/Hero/Hero";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
-
   return (
-    <h2>hello world!</h2>
-  )
+    <div className="home min-h-svh">
+      <Navbar />
+      <Hero />
+    </div>
+  );
 }
 
-export default App
+export default App;

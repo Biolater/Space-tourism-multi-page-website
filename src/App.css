@@ -1,0 +1,6 @@
+.home{
+    background-image: url('./assets/home/background-home-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
