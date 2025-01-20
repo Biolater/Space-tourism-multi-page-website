@@ -13,10 +13,14 @@ const Hero = () => {
           experience!
         </p>
       </div>
-      <div className="flex-grow flex justify-center items-center">
-        <button className="w-36 after:content-[''] hover:after:bg-white/20 after:transition-colors after:duration-500 after:block after:rounded-full after:z-[-1] relative after:w-72 after:h-72 after:bg-white/0 after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 h-36 rounded-full bg-white text-black text-preset-4">
-          EXPLORE
-        </button>
+      <div className="p-6 flex-grow flex justify-center items-center">
+        <div className="w-72 h-72 relative flex items-center justify-center rounded-full bg-white/0 transition-colors duration-500 group">
+          {/* Parent background changes only when button is hovered */}
+          <div className="absolute w-full h-full rounded-full bg-white/0 transition-colors duration-500 group-hover:bg-white/20"></div>
+          <button className="w-36 h-36 rounded-full bg-white text-black text-preset-4 relative z-10 group-hover:text-opacity-60 transition-colors duration-500">
+            EXPLORE
+          </button>
+        </div>
       </div>
     </main>
   );
