@@ -1,6 +1,6 @@
 type SVGProps = React.SVGProps<SVGSVGElement>;
 
-const HamburgerIcon: React.FC<SVGProps> = (props) => {
+const CloseIcon: React.FC<SVGProps> = (props) => {
   return (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" width="20" height="21">
       <g fill="#D0D6F9" fillRule="evenodd">
@@ -11,4 +11,4 @@ const HamburgerIcon: React.FC<SVGProps> = (props) => {
   );
 };
 
-export default HamburgerIcon;
+export default CloseIcon;

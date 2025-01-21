@@ -25,7 +25,9 @@ const Navbar = () => {
       </div>
       {/* Hamburger Menu */}
       <AnimatePresence>
-        {isMenuOpen && <HamburgerMenu ref={menuRef} />}
+        {isMenuOpen && (
+          <HamburgerMenu handleClose={handleClick} ref={menuRef} />
+        )}
       </AnimatePresence>
     </header>
   );

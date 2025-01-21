@@ -1,9 +1,9 @@
 type SVGProps = React.SVGProps<SVGSVGElement>;
 
-const HamburgerIcon: React.FC<SVGProps> = (props) => {
+const Logo: React.FC<SVGProps> = (props) => {
   return (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" width="48" height="48">
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <circle cx="24" cy="24" r="24" fill="#FFF" />
         <path
           fill="#0B0D17"
@@ -14,4 +14,4 @@ const HamburgerIcon: React.FC<SVGProps> = (props) => {
   );
 };
 
-export default HamburgerIcon;
+export default Logo;
