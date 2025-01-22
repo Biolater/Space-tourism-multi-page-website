@@ -6,7 +6,7 @@ import Destionation from "./components/Destination/Destionation";
 
 function App() {
   return (
-    <div className="home min-h-svh flex flex-col">
+    <div>
       <Navbar />
       <Routes>
         <Route path="/" element={<Hero />} />

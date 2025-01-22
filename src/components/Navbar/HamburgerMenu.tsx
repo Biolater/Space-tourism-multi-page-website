@@ -10,7 +10,7 @@ type HamburgerMenuProps = HTMLMotionProps<"div"> & {
   handleClose: () => void;
 };
 
-const MENUITEMS = ["home", "destination", "crew", "technology"];
+export const MENUITEMS = ["home", "destination", "crew", "technology"];
 
 // Use forwardRef to pass down the ref
 const HamburgerMenu = forwardRef<HTMLDivElement, HamburgerMenuProps>(

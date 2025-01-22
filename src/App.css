@@ -1,6 +1,22 @@
-.home{
+.hero{
     background-image: url('./assets/home/background-home-mobile.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
+}
+
+.destination{
+    background-image: url('./assets/destination/background-destination-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+@media (min-width: 768px) {
+    .hero{
+        background-image: url('./assets/home/background-home-tablet.jpg');
+    }
+    .destination{
+        background-image: url('./assets/destination/background-destination-tablet.jpg');
+    }
 }
