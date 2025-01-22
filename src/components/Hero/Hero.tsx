@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <main className="hero isolate flex flex-col min-h-[calc(100svh-5.5rem)]">
+    <main className="hero isolate pt-[5.5rem] flex flex-col">
       <div className="p-6 text-center space-y-300">
         <h3 className="text-preset-6 font-barlow tracking-[0.15rem]">
           SO, YOU WANT TO TRAVEL TO

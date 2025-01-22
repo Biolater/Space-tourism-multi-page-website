@@ -11,7 +11,7 @@ const Navbar = () => {
   const menuRef = useRef<HTMLDivElement>(null);
   useClickAway(menuRef, () => setIsMenuOpen(false));
   return (
-    <header className="min-h-[5.5rem] flex">
+    <header className="min-h-[5.5rem] flex fixed top-0 w-full z-10 bg-blue-900/75 backdrop-blur-md">
       <div className="px-6 flex items-center w-full justify-between">
         <a className="" href="/">
           <Logo />
