@@ -4,9 +4,9 @@ const NavItem: React.FC<{
   href: string;
 }> = ({ children, isActive, href }) => {
   return (
-    <li>
+    <li className="h-full flex items-center">
       <a
-        className={`text-preset-8 block w-full cursor-pointer transition-colors duration-500 ${
+        className={`text-preset-8 h-full w-full flex items-center cursor-pointer transition-colors duration-500 ${
           isActive
             ? "border-b-[0.1875rem]"
             : "border-b-[0.1875rem] border-white/0 hover:border-white/70"

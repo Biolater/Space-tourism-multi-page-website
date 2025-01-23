@@ -12,6 +12,22 @@
     background-position: bottom;
 }
 
+.navbar-logo{
+    position: relative;
+}
+
+.navbar-logo::after{
+    content: '';
+    position: absolute;
+    width: 37vw;
+    height: 1px;
+    background-color: #979797;
+    top:50%;
+    left: 6rem;
+    z-index: 10;
+    transform: translateY(-50%);
+}
+
 @media (min-width: 768px) {
     .hero{
         background-image: url('./assets/home/background-home-tablet.jpg');
