@@ -2,30 +2,18 @@
     background-image: url('./assets/home/background-home-mobile.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
 }
 
 .destination{
     background-image: url('./assets/destination/background-destination-mobile.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
 }
 
 .navbar-logo{
     position: relative;
-}
-
-.navbar-logo::after{
-    content: '';
-    position: absolute;
-    width: 37vw;
-    height: 1px;
-    background-color: #979797;
-    top:50%;
-    left: 6rem;
-    z-index: 10;
-    transform: translateY(-50%);
 }
 
 @media (min-width: 768px) {
@@ -34,5 +22,14 @@
     }
     .destination{
         background-image: url('./assets/destination/background-destination-tablet.jpg');
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero{
+        background-image: url('./assets/home/background-home-desktop.jpg');
+    }
+    .destination{
+        background-image: url('./assets/destination/background-destination-desktop.jpg');
     }
 }

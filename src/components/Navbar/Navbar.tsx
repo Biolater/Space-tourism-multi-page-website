@@ -16,20 +16,21 @@ const Navbar = () => {
   useClickAway(menuRef, () => setIsMenuOpen(false));
 
   return (
-    <header className="min-h-[5.5rem] lg:container lg:left-0 lg:right-0 mx-auto lg:mt-500 flex fixed top-0 w-full z-10 lg:bg-transparent lg:backdrop-blur-none bg-blue-900/75 backdrop-blur-md">
+    <header className="min-h-[5.5rem] lg:container max-w-[1440px] lg:left-0 lg:right-0 mx-auto lg:mt-500 flex fixed top-0 w-full z-10">
       <div className="px-6 md:pe-0 lg:ps-500 flex items-center w-full justify-between">
         <div className="me-8 after:hidden lg:after:block lg:m-0 navbar-logo">
           <a href="/">
             <Logo />
           </a>
         </div>
+        <div className="line hidden lg:block flex-grow ms-8 -me-400 z-10 h-px bg-white opacity-20"></div>
         <button className="md:hidden" onClick={handleClick}>
           <span className="sr-only">
             {isMenuOpen ? "Close navigation" : "Open navigation"}
           </span>
           <HamburgerIcon />
         </button>
-        <nav className="hidden md:flex gap-x-600 lg:backdrop-blur-lg md:bg-white/5 h-full flex-grow lg:flex-grow-0 items-center justify-end px-600 lg:px-800 lg:basis-2/4">
+        <nav className="hidden md:flex gap-x-600 backdrop-blur-lg md:bg-white/5 h-full flex-grow lg:flex-grow-0 items-center justify-end px-600 lg:px-800 lg:basis-2/4">
           <ul className="flex gap-x-600 h-full items-center">
             {MENUITEMS.map((item, idx) => (
               <NavItem
