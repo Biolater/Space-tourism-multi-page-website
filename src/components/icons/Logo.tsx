@@ -14,4 +14,5 @@ const Logo: React.FC<SVGProps> = (props) => {
   );
 };
 
+
 export default Logo;
