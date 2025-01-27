@@ -39,34 +39,52 @@ const PLANETS = [
   },
 ];
 
-const Destionation = () => {
+const Destination = () => {
   const [planet, setPlanet] = useState("MOON");
-  const handlePlanetSelect = (planetName: string) => setPlanet(planetName);
+  const [fade, setFade] = useState(false);
+
+  const handlePlanetSelect = (planetName: string) => {
+    setFade(true); // Trigger fade-out
+    setTimeout(() => {
+      setPlanet(planetName); // Change planet after fade-out
+      setFade(false); // Trigger fade-in
+    }, 200); // Duration of fade-out (matches CSS transition)
+  };
+
+  const selectedPlanet = PLANETS.find(
+    (planetItem) => planetItem.label === planet
+  );
+
   return (
     <main className="destination min-h-svh">
-      <div className="pt-[5.5rem] ">
+      <div className="pt-[5.5rem] sm:max-w-[32rem] mx-auto">
         <div className="p-6 flex flex-col gap-800">
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center sm:justify-start gap-6">
             <span className="font-bold font-barlow text-white">01</span>
             <h1 className="text-center font-barlow tracking-[0.15rem]">
               PICK YOUR DESTINATION
             </h1>
           </div>
           <div className="flex flex-col gap-800">
-            <div className="flex flex-col items-center">
+            {/* Image */}
+            <div
+              className={`flex flex-col items-center transition-opacity duration-300 ${
+                fade ? "opacity-0" : "opacity-100"
+              }`}
+            >
               <img
-                src={
-                  PLANETS.find((planetItem) => planetItem.label === planet)?.img
-                }
-                className="w-[10.25rem] h-[10.25rem]"
+                src={selectedPlanet?.img}
+                className="w-[10.25rem] h-[10.25rem] sm:w-[17.5rem] sm:h-[17.5rem] object-contain"
                 alt={`${planet} image`}
               />
             </div>
+
+            {/* Buttons */}
             <div className="flex gap-400 justify-center">
               {PLANETS.map((planetItem, idx) => (
                 <button
                   onClick={() => handlePlanetSelect(planetItem.label)}
-                  className={`text-preset-8 pb-3 transition-colors duration-500 font-barlow uppercase tracking-[0.125rem] ${
+                  className={`text-preset-8 pb-3 transition-colors duration-300 font-barlow uppercase tracking-[0.125rem] ${
                     planetItem.label === planet
                       ? "border-b-[0.1875rem]"
                       : "border-b-[0.1875rem] border-white/0 hover:border-white/70"
@@ -77,36 +95,33 @@ const Destionation = () => {
                 </button>
               ))}
             </div>
-            <div className="flex text-center flex-col gap-400">
-              <h2 className="text-preset-2">{planet}</h2>
-              <p className="text-preset-9 font-barlowRegular font-thin">
-                {
-                  PLANETS.find((planetItem) => planetItem.label === planet)
-                    ?.description
-                }
+
+            {/* Details */}
+            <div
+              className={`flex text-center flex-col gap-400 transition-opacity duration-300 ${
+                fade ? "opacity-0" : "opacity-100"
+              }`}
+            >
+              <h2 className="text-preset-2 sm:text-[5rem]">{planet}</h2>
+              <p className="text-preset-9 text-base font-barlowRegular font-thin">
+                {selectedPlanet?.description}
               </p>
               <hr className="h-px bg-white opacity-20" />
-              <div className="flex flex-col gap-300">
-                <div className="flex flex-col gap-150">
+              <div className="flex flex-col gap-300 sm:flex-row sm:justify-center">
+                <div className="flex flex-col gap-150 sm:flex-grow">
                   <p className="text-preset-7 font-barlow font-normal">
                     AVG. DISTANCE
                   </p>
-                  <p className="text-preset-6 text-[1.75rem] font-normal">
-                    {
-                      PLANETS.find((planetItem) => planetItem.label === planet)
-                        ?.distance
-                    }
+                  <p className="text-preset-6 text-[1.75rem] sm font-normal">
+                    {selectedPlanet?.distance}
                   </p>
                 </div>
-                <div className="flex flex-col gap-150">
+                <div className="flex flex-col gap-150 sm:flex-grow">
                   <p className="text-preset-7 font-barlow font-normal">
                     EST. TRAVEL TIME
                   </p>
                   <p className="text-preset-6 text-[1.75rem] font-normal">
-                    {
-                      PLANETS.find((planetItem) => planetItem.label === planet)
-                        ?.time
-                    }
+                    {selectedPlanet?.time}
                   </p>
                 </div>
               </div>
@@ -118,4 +133,4 @@ const Destionation = () => {
   );
 };
 
-export default Destionation;
+export default Destination;
