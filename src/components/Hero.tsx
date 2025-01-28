@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
-    <main className="hero isolate pt-[5.5rem] lg:pt-[8rem]">
-      <div className="flex flex-col lg:flex-row lg:max-w-6xl mx-auto lg:items-center lg:justify-between lg:min-h-[calc(100svh+8rem)]">
+    <main className="isolate lg:pt-[8rem]">
+      <div className="flex flex-col lg:flex-row lg:max-w-6xl mx-auto lg:items-center lg:justify-between lg:min-h-svh">
         <div className="p-6 text-center lg:text-start space-y-300 lg:space-y-0">
           <h3 className="text-preset-6 md:text-[1.75rem] font-light font-barlow tracking-[0.15rem]">
             SO, YOU WANT TO TRAVEL TO
