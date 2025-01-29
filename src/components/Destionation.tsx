@@ -60,7 +60,7 @@ const Destination = () => {
       <div>
         <div className="p-6 flex flex-col gap-800 sm:gap-600">
           <div className="flex items-center justify-center sm:justify-start gap-6">
-            <span className="font-bold font-barlow text-white">01</span>
+            <span className="font-bold font-barlow text-white/25">01</span>
             <h1 className="text-center font-barlow tracking-[0.15rem]">
               PICK YOUR DESTINATION
             </h1>

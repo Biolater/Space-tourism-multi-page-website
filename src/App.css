@@ -33,6 +33,9 @@
     .hero{
         background-image: url('./assets/home/background-home-tablet.jpg');
     }
+    .crew{
+        background-image: url('./assets/crew/background-crew-tablet.jpg');
+    }
 }
 
 @media (min-width: 1024px) {
@@ -41,5 +44,8 @@
     }
     .destination{
         background-image: url('./assets/destination/background-destination-desktop.jpg');
+    }
+    .crew{
+        background-image: url('./assets/crew/background-crew-desktop.jpg');
     }
 }
