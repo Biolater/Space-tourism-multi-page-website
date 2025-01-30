@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { useRef } from "react";
 import Crew from "./components/Crew";
-import Tech from "./components/Tech";
+import Tech from "./components/Technology/Tech";
 
 function App() {
   const ref = useRef<HTMLDivElement>(null);

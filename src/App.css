@@ -19,6 +19,13 @@
     background-position: center;
 }
 
+.tech{
+    background-image: url('./assets/technology/background-technology-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .navbar-logo{
     position: relative;
 }
@@ -36,6 +43,9 @@
     .crew{
         background-image: url('./assets/crew/background-crew-tablet.jpg');
     }
+    .tech{
+        background-image: url('./assets/technology/background-technology-tablet.jpg');
+    }
 }
 
 @media (min-width: 1024px) {
@@ -47,5 +57,8 @@
     }
     .crew{
         background-image: url('./assets/crew/background-crew-desktop.jpg');
+    }
+    .tech{
+        background-image: url('./assets/technology/background-technology-desktop.jpg');
     }
 }

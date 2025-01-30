@@ -3,6 +3,7 @@ import MoonImage from "../assets/destination/image-moon.webp";
 import MarsImage from "../assets/destination/image-mars.webp";
 import EuropaImage from "../assets/destination/image-europa.webp";
 import TitanImage from "../assets/destination/image-europa.webp";
+import SectionHeading from "./SectionHeading";
 
 const PLANETS = [
   {
@@ -59,12 +60,8 @@ const Destination = () => {
     <main className="container mx-auto">
       <div>
         <div className="p-6 flex flex-col gap-800 sm:gap-600">
-          <div className="flex items-center justify-center sm:justify-start gap-6">
-            <span className="font-bold font-barlow text-white/25">01</span>
-            <h1 className="text-center font-barlow tracking-[0.15rem]">
-              PICK YOUR DESTINATION
-            </h1>
-          </div>
+          <SectionHeading number={1} title="Pick your destination" />
+
           <div className="flex flex-col gap-800 sm:max-w-[32rem] lg:max-w-full lg:flex-row mx-auto">
             {/* Image */}
             <div

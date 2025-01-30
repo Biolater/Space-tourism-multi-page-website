@@ -3,6 +3,7 @@ import Mark from "../assets/crew/image-mark-shuttleworth.webp";
 import Victor from "../assets/crew/image-victor-glover.webp";
 import Anousheh from "../assets/crew/image-anousheh-ansari.webp";
 import { useState } from "react";
+import SectionHeading from "./SectionHeading";
 
 const CREW_DATA = [
   {
@@ -51,12 +52,7 @@ const Crew = () => {
   return (
     <main className="container mx-auto p-6 md:pb-0 lg:py-12">
       <div className="flex flex-col gap-800">
-        <div className="flex items-center justify-center sm:justify-start gap-6">
-          <span className="font-bold font-barlow text-white/25">02</span>
-          <h1 className="text-center font-barlow tracking-[0.15rem]">
-            MEET YOUR CREW
-          </h1>
-        </div>
+        <SectionHeading number={2} title="Meet your crew" />
         <div className="flex flex-col gap-400 lg:flex-row">
           <div className="explanation md:max-w-md md:mx-auto lg:mx-0 lg:max-w-full text-center lg:text-left flex flex-col gap-800 lg:basis-1/2">
             <div className="rank-description flex flex-col gap-6 lg:mt-auto">
