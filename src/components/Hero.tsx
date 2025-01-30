@@ -18,7 +18,10 @@ const Hero = () => {
           <div className="w-72 h-72 md:w-[24.5rem] md:h-[24.5rem] relative flex items-center justify-center rounded-full bg-white/0 transition-colors duration-500 group">
             {/* Parent background changes only when button is hovered */}
             <div className="absolute w-full h-full rounded-full bg-white/0 transition-colors duration-500 group-hover:bg-white/20"></div>
-            <a href="/destination" className="w-36 h-36 flex items-center justify-center md:w-[17rem] md:h-[17rem] rounded-full bg-white text-black text-preset-4 relative z-10 group-hover:text-opacity-60 transition-colors duration-500">
+            <a
+              href="/destination"
+              className="w-36 h-36 flex items-center justify-center md:w-[17rem] md:h-[17rem] rounded-full bg-white text-black text-preset-4 relative z-10 group-hover:text-opacity-60 transition-colors duration-500"
+            >
               EXPLORE
             </a>
           </div>
