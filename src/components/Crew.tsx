@@ -85,7 +85,7 @@ const Crew = () => {
                 <span
                   onClick={() => handleDotClick(index)}
                   key={index}
-                  className={`size-[0.625rem] transition-all duration-300 lg:size-[0.9375rem] rounded-full block ${
+                  className={`size-[0.625rem] cursor-pointer transition-all duration-300 lg:size-[0.9375rem] rounded-full block ${
                     index === selectedIndex ? "bg-white" : "bg-white/50"
                   }`}
                 ></span>
